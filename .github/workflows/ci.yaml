@@ -5,7 +5,7 @@ name: CI
 on:
   workflow_dispatch:
     inputs:
-      image:
+      image-tag:
         description: Image to scan
         required: true
         default: alpine:3.7
