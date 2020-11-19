@@ -5,7 +5,7 @@ name: CI
 on:
   workflow_dispatch:
     inputs:
-      image-tag:
+      image:
         description: Image to scan
         required: true
         default: alpine:3.7
@@ -19,7 +19,7 @@ jobs:
         id: scan
         uses: sysdiglabs/scan-action@use-inline-scan-v2 
         with:
-          image-tag: "alpine:3.7"
+          image-tag: ${{ github.event.inputs.image }}
           sysdig-secure-token: ${{ secrets.SYSDIG_SECURE_TOKEN }}
           pull-from-registry: true
 
