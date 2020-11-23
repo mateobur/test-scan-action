@@ -15,6 +15,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Pull Scan image
+        run: docker pull sysdiglabs/scan-action@use-inline-scan-v2 
+        
       - name: Scan image
         id: scan
         uses: sysdiglabs/scan-action@use-inline-scan-v2 
