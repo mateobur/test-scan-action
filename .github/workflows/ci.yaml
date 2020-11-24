@@ -20,7 +20,7 @@ jobs:
         id: scan
         uses: sysdiglabs/scan-action@use-inline-scan-v2 
         with:
-          image-tag: ${{ github.event.inputs.image }}
+          image-tag: "alpine:3.7"
           sysdig-secure-token: ${{ secrets.SYSDIG_SECURE_TOKEN }}
           pull-from-registry: true
           extra-parameters: "--time-profile"
