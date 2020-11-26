@@ -28,4 +28,3 @@ jobs:
         if: always()
         with:
           sarif_file: ${{ steps.scan.outputs.sarifReport }}
-
