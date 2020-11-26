@@ -22,7 +22,6 @@ jobs:
         with:
           image-tag: "alpine:3.7"
           sysdig-secure-token: ${{ secrets.SYSDIG_SECURE_TOKEN }}
-          pull-from-registry: true
           extra-parameters: "--time-profile"
 
       - uses: github/codeql-action/upload-sarif@v1
