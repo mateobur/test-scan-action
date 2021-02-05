@@ -20,7 +20,7 @@ jobs:
         id: scan
         uses: sysdiglabs/scan-action@v3
         with:
-          image-tag: "instrumentisto/nmap:latest"
+          image-tag: "instrumentisto/nmap"
           sysdig-secure-token: ${{ secrets.SYSDIG_SECURE_TOKEN }}
           ignore-failed-scan: true
 
